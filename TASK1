@@ -1,0 +1,52 @@
+package Task_1;
+import java.util.Scanner;
+public class SimpleCalculator {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		double num1 , num2, result;
+		char operator;
+		
+		System.out.println("\n\t Simple Calculator");
+		System.out.println("\n Available operations: +, -, *, / \n");
+		
+		System.out.println("\n Enter the First Number: ");
+		num1 = sc.nextDouble();
+		
+		System.out.println("\n Enter the Operator");
+		operator= sc.next().charAt(0);
+		
+		System.out.println("\n Enter Second Number");
+		num2 = sc.nextDouble();
+		
+		switch (operator) {
+		case '+':
+			result = num1+ num2;
+			System.out.println("\n\t Result: " + result);
+			break;
+
+		case '-':
+			result = num1- num2;
+			System.out.println("\n\t\t Result: " + result);
+			break;
+			
+		case '*':
+			result = num1*num2;
+			System.out.println("\n\t\t Result: " + result);
+			break;
+			
+		case '/':
+			if (num2 !=0) {
+				result= num1/num2;
+				System.out.println("\n\t\t Result: " + result);
+			}else {
+				System.out.println("\n\t Error : Can not Divide by zero.");
+			}
+			break;
+		default:
+			System.out.println("\n\t Invilid operator. use +, -, * ,/ .");
+		}
+	}
+
+}
